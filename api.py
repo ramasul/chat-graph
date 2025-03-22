@@ -3,6 +3,7 @@ import os
 import gc
 import time
 import json
+import logging
 import base64
 from typing import List
 from datetime import datetime, timezone
@@ -36,6 +37,7 @@ from src.api_response import create_api_response
 from src.logger import CustomLogger
 # from src.chat_interaction import *
 
+logging.basicConfig(format='%(asctime)s - %(message)s',level='INFO')
 logger = CustomLogger()
 CHUNK_DIR = os.path.join(os.path.dirname(__file__), "chunks")
 MERGED_DIR = os.path.join(os.path.dirname(__file__), "merged_files")
